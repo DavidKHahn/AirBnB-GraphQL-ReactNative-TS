@@ -17,7 +17,15 @@
     "importHelpers": true,
     "strictNullChecks": true,
     "suppressImplicitAnyIndexErrors": true,
-    "noUnusedLocals": true
+    "noUnusedLocals": true,
+    "skipLibCheck": true,
+    "types":
+    [
+      "jest",
+      "node",
+      "react",
+      "react-dom"
+    ]
   },
   "exclude": [
     "node_modules",
