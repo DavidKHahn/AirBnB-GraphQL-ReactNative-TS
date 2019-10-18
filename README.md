@@ -1,4 +1,14 @@
-# airbnbCloneApp_ts
-typescript, airbnb, graphql, react native mobile application
+## AirBnB-GraphQL-ReactNative-TS
 
-Credit: https://github.com/benawad/graphql-ts-server-boilerplate (excellent boilerplate using graphql, typescript)
+Tech Used:
+    - Typescript,
+    - Redis,
+    - GraphQL,
+    - PostgreSQL
+    - React Native
+
+Source:
+    - https://github.com/benawad/graphql-ts-server-boilerplate (Credit: Ben Awad)
+
+    - yarn create react-app insert-my-app-name-here --scripts-version=react-scripts-ts (Typescript Create-React-App)
+
