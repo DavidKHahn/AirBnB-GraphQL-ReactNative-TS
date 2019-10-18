@@ -18,7 +18,7 @@
     "strictNullChecks": true,
     "suppressImplicitAnyIndexErrors": true,
     "noUnusedLocals": true,
-    "skipLibCheck": true,
+    "skipLibCheck": true, // will not any declaration files with .d.ts (TS conflicts w same node_modules for server, client)
     "types":
     [
       "jest",
