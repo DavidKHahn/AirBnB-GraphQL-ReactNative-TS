@@ -18,11 +18,12 @@ interface Props {
 class C extends React.PureComponent<FormikProps<FormValues> & Props>{
   render() {
     const {values, handleSubmit, handleChange, handleBlur, touched, errors} = this.props;
-    console.log(errors)
     return (
       <form style={{ display: 'flex' }} onSubmit={handleSubmit}>
         <div style={{ width: 400, margin: 'auto'}}>
-            <FormItem help={touched.email && errors.email ? errors.email : ""}>
+            <FormItem help={touched.email && errors.email ? errors.email : ""}
+                    validateStatus={touched.email && errors.email ? "error" : undefined}
+            >
                 <Input
                 // formik requires namefield on input
                     name="email"
@@ -35,7 +36,7 @@ class C extends React.PureComponent<FormikProps<FormValues> & Props>{
                 />
             </FormItem>
             <FormItem help={touched.password && errors.password ? errors.password : ""}
-                    style={{ color:'red'}}
+                    validateStatus={touched.password && errors.password ? "error" : undefined}
             >
                 <Input
                     name="password"
@@ -93,6 +94,8 @@ const validationSchema = yup.object().shape({
 export const RegisterView = withFormik<Props, FormValues>({
 // validationSchema from Yup can be passed in and Formik will check
     validationSchema,
+// validateOnChange: false,
+// validateOnBlur: false,
 // access to props
     mapPropsToValues: () => ({ email: '', password: '' }),
 // handleSubmit is called whenever form is submitted
